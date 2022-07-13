@@ -1,16 +1,3 @@
-# POO Practica
-
-Modelo de un portafolio de obras de arte. Cada obra tiene un tipo (escultura, pintura, video,…), uno o más autores, una fecha de creación, un valor estimado. Cada obra tiene asociado un conjunto de fotografías y/o videos para exhibirla en el portafolio. A partir del portafolio se crean exposiciones de las obras en galerías. Cada exposición tiene una fechas, un lugar y una descripción. Para una exposición se selecciona un conjunto de obras del portafolio que se van a presentar.
-
-## Diagrama de Clases
-
-![class diagram](../assets/diagram01.jpg)
-
-## Capturas
-
-Archivo de ejecución principal:
-
-```
 from Portfolio import Portfolio
 from Obra import Obra
 from Author import Author
@@ -53,12 +40,3 @@ if __name__ == '__main__':
   expo.agregarObra(portafolio.getItemAt(2))
   expo.agregarObra(portafolio.getItemAt(3))
   expo.info()
-```
-
-Salida de la instrucción `portafolio.listInfo()`
-
-![screenshot one](../assets/portfolio01.png)
-
-Salida de la instrucción `expo.info()`
-
-![screenshot two](../assets/portfolio02.png)
