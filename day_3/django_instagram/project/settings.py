@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'posts.apps.PostsConfig'
+    'posts.apps.PostsConfig',
+    'users.apps.UsersConfig'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,9 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,6 +121,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
